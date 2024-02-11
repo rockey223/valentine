@@ -1,0 +1,51 @@
+.card {
+  height: 500px;
+  background-color: yellow;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+.card img {
+  height: 200px;
+}
+
+.card h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.buttons {
+  width: 100%;
+  max-width: 500px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+.yes{
+  background-color: green;
+  /* position: absolute; */
+  left: 50px;
+}
+
+.No {
+  background-color: red;
+   position: absolute;
+  right: -50px;
+  transition: all 0.5s linear;
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+}
