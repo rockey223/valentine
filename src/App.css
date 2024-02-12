@@ -30,6 +30,7 @@
   background-color: green;
   /* position: absolute; */
   /* left: 50px; */
+  cursor: pointer;
 }
 
 .No {
@@ -41,6 +42,7 @@
 }
 .Noo {
   background-color: red;
+  cursor: pointer;
   position: absolute;
   /* right: -50px; */
   transition: all 0.5s linear;
@@ -50,7 +52,6 @@
 button {
   height: 50px;
   width: 150px;
-  cursor: pointer;
   border: none;
   outline: none;
   border-radius: 10px;
