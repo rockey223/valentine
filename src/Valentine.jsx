@@ -69,7 +69,7 @@ const Valentine = () => {
           " "
         ) : (
           <button
-            style={{ top: `${position.y}px`, left: `${position.x}px` }}
+            style={{ top: `${position.y + 15}px`, left: `${position.x}px` }}
             onMouseEnter={no}
             // style={{ top: `${position.y}px`, right: `${position.x}px` }}
             className="Noo"
