@@ -16,6 +16,12 @@ const Valentine = () => {
     // console.log(window.innerWidth);
     console.log(Math.random() * window.innerHeight);
   }, []);
+  
+  const getPos = () =>{
+    
+    const rect = ref.current.getBoundingClientRect();
+    setPosition({ x: rect.x, y: rect.y });
+  }
 
   const no = () => {
     const buttonWidth = 150; // Adjust according to your button's width
@@ -52,6 +58,7 @@ const Valentine = () => {
               //   right: position.x <= 0 ? "" : position.x,
               // }}
               className="No"
+              onLoad={getPos}
             >
               No
             </button>
