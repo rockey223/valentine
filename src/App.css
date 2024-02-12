@@ -21,22 +21,30 @@
 .buttons {
   width: 100%;
   max-width: 500px;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-.yes{
+.yes {
   background-color: green;
   /* position: absolute; */
-  left: 50px;
+  /* left: 50px; */
 }
 
 .No {
   background-color: red;
-   position: absolute;
-  right: -50px;
+  position: relative;
+  /* right: -50px; */
   transition: all 0.5s linear;
+  opacity: 0;
+}
+.Noo {
+  background-color: red;
+  position: absolute;
+  /* right: -50px; */
+  transition: all 0.5s linear;
+  /* opacity: 0; */
 }
 
 button {

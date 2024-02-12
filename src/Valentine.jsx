@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import firstImage from "./assets/first.gif";
 import secondImage from "./assets/second.gif";
 import { motion } from "framer-motion";
 const Valentine = () => {
   const [yes, setYes] = useState(false);
-  const [position, setPosition] = useState({ x:0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const ref = useRef(null);
 
-  useEffect(()=>{
+  useEffect(() => {
+    const rect = ref.current.getBoundingClientRect();
+    console.log(rect.x);
+    setPosition({ x: rect.x, y: rect.y });
+    console.log(rect);
     console.log(window.innerHeight);
     // console.log(window.innerWidth);
-   console.log( Math.random()* window.innerHeight)
-  },[])
-
+    console.log(Math.random() * window.innerHeight);
+  }, []);
 
   const no = () => {
     const buttonWidth = 150; // Adjust according to your button's width
@@ -22,7 +26,7 @@ const Valentine = () => {
     const randomX = Math.random() * maxPosX;
     const randomY = Math.random() * maxPosY;
 
-    setPosition({ x: randomX, y: randomY});
+    setPosition({ x: randomX, y: randomY });
   };
 
   return (
@@ -41,14 +45,30 @@ const Valentine = () => {
             <button className="yes" onClick={() => setYes(true)}>
               Yes
             </button>
-            <motion.button
-             style={{top: position.y<= 0 ? "" :position.y , right: position.x<= 0 ? "" :position.x}}
+            <button
+              ref={ref}
+              // style={{
+              //   top: position.y <= 0 ? "" : position.y,
+              //   right: position.x <= 0 ? "" : position.x,
+              // }}
               className="No"
-              onClick={no}
             >
               No
-            </motion.button>
+            </button>
           </div>
+        )}
+
+        {yes ? (
+          " "
+        ) : (
+          <button
+            style={{ top: `${position.y}px`, left: `${position.x}px` }}
+            onMouseEnter={no}
+            // style={{ top: `${position.y}px`, right: `${position.x}px` }}
+            className="Noo"
+          >
+            NO
+          </button>
         )}
       </div>
     </>
