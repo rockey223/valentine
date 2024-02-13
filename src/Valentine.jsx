@@ -7,9 +7,12 @@ const Valentine = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const ref = useRef(null);
 
+  const [rectt, setyRectt] = useState()
+
   useEffect(() => {
-    const rect = ref.current.getBoundingClientRect();
+    const rect = ref.current.getBoundingClientRect();         
     console.log(rect.x);
+    setyRectt(rect.x)
     setPosition({ x: rect.x, y: rect.y });
     console.log(rect);
     console.log(window.innerHeight);
@@ -69,7 +72,7 @@ const Valentine = () => {
           " "
         ) : (
           <button
-            style={{ top: `${position.y + 15}px`, left: `${position.x}px` }}
+            style={{ top: `${position.y }px`, left: `${position.x}px`, transition: `${rectt != position.x ? 'all 0.5s linear':"all 0s linear " }` }}
             onMouseEnter={no}
             // style={{ top: `${position.y}px`, right: `${position.x}px` }}
             className="Noo"

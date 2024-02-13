@@ -37,7 +37,7 @@
   background-color: red;
   position: relative;
   /* right: -50px; */
-  transition: all 0.5s linear;
+  /* transition: all 0.5s linear; */
   opacity: 0;
 }
 .Noo {
@@ -45,7 +45,7 @@
   cursor: pointer;
   position: absolute;
   /* right: -50px; */
-  transition: all 0.5s linear;
+  /* transition: all 0.5s linear; */
   /* opacity: 0; */
 }
 
