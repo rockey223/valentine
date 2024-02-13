@@ -77,7 +77,7 @@ const Valentine = () => {
             // style={{ top: `${position.y}px`, right: `${position.x}px` }}
             className="Noo"
           >
-            NO
+            No
           </button>
         )}
       </div>
