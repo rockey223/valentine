@@ -13,7 +13,7 @@ const Valentine = () => {
     const rect = ref.current.getBoundingClientRect();
     console.log(rect.x);
     setyRectt(rect.x);
-    setPosition({ x: rect.x, y: rect.y - (96.25 + 16) });
+    setPosition({ x: rect.x, y: rect.y - (96.25 ) });
     console.log(rect);
     console.log(window.innerHeight);
     // console.log(window.innerWidth);
